@@ -1,35 +1,56 @@
 {
-  "store.home": { 
+  "store.home": {
     "blocks": [
-      "info-card#button-right", 
+      "info-card#button-right",
       "info-card#button-left",
       "flex-layout.row",
       "slider-layout#home",
       "responsive-layout.desktop#desktop",
       "responsive-layout.mobile#mobile",
-      "tab-layout#home"
+      "tab-layout#home",
+      "modal-trigger#first"
     ]
-   
   },
-    "tab-layout#home": {
-      "children": [
-        "tab-list#home",
-        "tab-content#home"
-      ]
-    },
-
-    "tab-list#home": {
-      "children":[
-        "tab-list.item#home1", 
-        "tab-list.item#home2"
-      ]
-    },
-    "tab-content#home": {
-      "children": [
-        "tab-content.item#home1",
-        "tab-content.item#home2"
-        ]
-    },
+  "modal-trigger#first": {
+    "children": [
+      "rich-text#trigger",
+      "modal-layout#first"
+    ]
+  },
+  "rich-text#trigger": {
+    "props": {
+      "text": "CLIQUE ME"
+    }
+  },
+  "modal-layout#first": {
+    "children": [
+      "rich-text#hello"
+    ]
+  },
+  "rich-text#hello": {
+    "props": {
+      "text": "Hello"
+    }
+  },
+ 
+  "tab-layout#home": {
+    "children": [
+      "tab-list#home",
+      "tab-content#home"
+    ]
+  },
+  "tab-list#home": {
+    "children": [
+      "tab-list.item#home1",
+      "tab-list.item#home2"
+    ]
+  },
+  "tab-content#home": {
+    "children": [
+      "tab-content.item#home1",
+      "tab-content.item#home2"
+    ]
+  },
   "tab-list.item#home1": {
     "props": {
       "tabId": "majorAppliances",
@@ -74,11 +95,16 @@
     }
   },
   "responsive-layout.desktop#desktop": {
-    "children": ["rich-text#desktop", "image#desktop"]
+    "children": [
+      "rich-text#desktop",
+      "image#desktop"
+    ]
   },
-  
   "responsive-layout.mobile#mobile": {
-    "children": ["rich-text#mobile", "image#mobile"]
+    "children": [
+      "rich-text#mobile",
+      "image#mobile"
+    ]
   },
   "rich-text#desktop": {
     "props": {
@@ -99,30 +125,37 @@
       "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Desktop.jpg?q=1",
       "link": {
         "url": "/small-appliances/coffee-makers"
-      } ,
+      },
       "alt": "Coffee Makers Collection",
       "maxWidth": "100%"
     }
   },
-  
   "image#mobile": {
     "props": {
       "src": "https://appliancetheme.vteximg.com.br/arquivos/Responsive-Image-Mobile.jpg?q=1",
       "link": {
         "url": "/small-appliances/coffee-makers"
-      } ,
+      },
       "alt": "Coffee Makers Collection",
       "maxWidth": "100%"
     }
   },
   "flex-layout.row": {
-    "children": ["info-card#rethink", "flex-layout.col"],
+    "children": [
+      "info-card#rethink",
+      "flex-layout.col"
+    ],
     "props": {
-      "blockClass": ["name"]
+      "blockClass": [
+        "name"
+      ]
     }
   },
   "flex-layout.col": {
-    "children": ["image#electronics", "image#major-appliance"]
+    "children": [
+      "image#electronics",
+      "image#major-appliance"
+    ]
   },
   "info-card#rethink": {
     "props": {
@@ -145,8 +178,6 @@
       "maxWidth": "100%"
     }
   },
-  
-
   "info-card#button-right": {
     "props": {
       "isFullModeStyle": false,
