@@ -32,7 +32,6 @@
       "text": "Hello"
     }
   },
- 
   "tab-layout#home": {
     "children": [
       "tab-list#home",
